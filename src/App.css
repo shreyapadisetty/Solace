@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #f9eee0;
+}
+
+.logo img {
+  width: 80px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio */
+  object-fit: contain; /* Makes sure the image fits nicely */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo on left, links on right */
+  align-items: center; /* Vertically centers everything */
+  padding: 10px 70px;
+  background-color: #f9eee0;
+  border-bottom: 1px solid #2b2927;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 60px; /* Add space between the links */
+}
+
+.nav-list li a {
+  color: black;
+  text-decoration: none; /* Removes default underline */
+  font-size: 18px;
+  position: relative; /* Needed for the pseudo-element */
+  padding-bottom: 4px;
+}
+
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.nav-list li a:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
