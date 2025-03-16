@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { useEffect } from 'react';
 
 import image1 from './images/Sign in.png';
 import image2 from './images/Home.png';
@@ -33,7 +32,7 @@ function Home() {
     { name: "Augustin III Santiesteban", role: "Product Lead" },
     { name: "Kaiyang He", role: "UX Lead" }
   ];
-  
+
 return (
     <div className="min-h-screen bg-white text-black font-sans">
 
