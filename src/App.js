@@ -27,17 +27,6 @@ const designs = [
   image16, image17
 ];
 
-const ScrollToTop = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Scroll to the top of the page every time the route changes
-    window.scrollTo(0, 0);
-  }, [location]);
-
-  return null;
-};
-
 function Home() {
   const teamMembers = [
     { name: "Zehui Zhang", role: "Team Lead" },
@@ -46,9 +35,7 @@ function Home() {
     { name: "Kaiyang He", role: "UX Lead" }
   ];
 
-return (
-    
-    
+return (  
     <div className="min-h-screen bg-white text-black font-sans">
 
       {/* Hero Section */}
