@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react'; 
+import { Swiper } from 'swiper/react'; 
 import 'swiper/css';
 
 import image1 from './images/Sign in.png';
