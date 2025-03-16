@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 
 import image1 from './images/Sign in.png';
 import image2 from './images/Home.png';
@@ -25,6 +27,17 @@ const designs = [
   image16, image17
 ];
 
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to the top of the page every time the route changes
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+};
+
 function Home() {
   const teamMembers = [
     { name: "Zehui Zhang", role: "Team Lead" },
@@ -34,6 +47,8 @@ function Home() {
   ];
 
 return (
+    
+    
     <div className="min-h-screen bg-white text-black font-sans">
 
       {/* Hero Section */}
@@ -326,6 +341,7 @@ function Navbar() {
 function App() {
   return (
     <Router>
+      <ScrollToTop /> 
       <Navbar />
       <div className="overflow-hidden">
         <Routes>
