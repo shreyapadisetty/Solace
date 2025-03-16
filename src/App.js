@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { useEffect } from 'react';
-import { Swiper } from 'swiper/react'; 
-import 'swiper/css';
 
 import image1 from './images/Sign in.png';
 import image2 from './images/Home.png';
@@ -35,23 +33,8 @@ function Home() {
     { name: "Augustin III Santiesteban", role: "Product Lead" },
     { name: "Kaiyang He", role: "UX Lead" }
   ];
-
-  useEffect(() => {
-    // Swiper initialization
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,  // Show 4 images at a time
-      spaceBetween: 20,  // Space between slides
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
-    // Cleanup Swiper instance when the component unmounts
-    return () => swiper.destroy();
-  }, []); // Empty array means this effect runs once after the first render
   
-  return (
+return (
     <div className="min-h-screen bg-white text-black font-sans">
 
       {/* Hero Section */}
