@@ -299,46 +299,49 @@ function Project() {
         </div>
       </div>
 
-{/* UI/UX Designs */}
-<div className="py-12 px-8">
-  <h2 className="text-4xl font-bold text-center mb-12">UI/UX Designs</h2>
-  <div className="max-w-6xl mx-auto text-center">
-    <div className="bg-[#b0dce7] p-6 rounded-lg shadow-lg mb-6">
-      <h3 className="text-2xl font-bold">Design Concepts</h3>
-      <p className="text-sm mb-4">
-        Our design focuses on ease of use, intuitive navigation, and a comforting interface for users in emotional distress.
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {designs.map((design, index) => (
-          <div
-            key={index}
-            className="flex justify-center"
-            style={{
-              gridColumnEnd: (index + 1) % 4 === 0 ? "span 1" : "auto",
-            }}
-          >
-            <img
-              src={design}
-              alt={`Design ${index + 1}`}
-              className="rounded-lg shadow-lg"
-            />
+      {/* UI/UX Designs */}
+      <div className="py-12 px-8">
+        <h2 className="text-4xl font-bold text-center mb-12">UI/UX Designs</h2>
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="bg-[#b0dce7] p-6 rounded-lg shadow-lg mb-6">
+            <h3 className="text-2xl font-bold">Design Concepts</h3>
+            <p className="text-sm mb-4">
+              Our design focuses on ease of use, intuitive navigation, and a comforting interface for users in emotional distress.
+            </p>
+            <div className="grid grid-cols-4 gap-4">
+              {designs.map((design, index) => (
+                <div
+                  key={index}
+                  className="flex justify-center"
+                  style={{
+                    gridColumnEnd: (index + 1) % 4 === 0 ? "span 1" : "auto",
+                  }}
+                >
+                  <img
+                    src={design}
+                    alt={`Design ${index + 1}`}
+                    className="rounded-lg shadow-lg"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
       {/* Call to Action */}
       <div className="bg-[#4aa2dc] text-white py-16 px-8 text-center">
         <h2 className="text-3xl font-bold mb-6">Join Us in Making a Difference</h2>
-        <p className="text-lg mb-8 max-w-2xl mx-auto">Support our vision of creating a more compassionate world by joining the Solace movement.</p>
-        <Link
-        to=""
-        className="bg-white text-[#4aa2dc] px-6 py-3 rounded-lg text-lg font-semibold hover:bg-[#e0f2f9]/90 hover:text-black transition-all"
-      >
-        Contact Us
-      </Link>
+        <p className="text-lg mb-8 max-w-2xl mx-auto">
+          Together, we can create a more compassionate world. Solace is more than just a project—it's a movement. Help us spread the message and bring support to those in need.
+        </p>
+        <Link 
+          to="#" 
+          onClick={(e) => e.preventDefault()} 
+          className="bg-white text-[#4aa2dc] px-8 py-3 rounded-lg text-lg font-semibold hover:bg-[#e0f2f9] transition-all"
+        >
+          Contact Us
+        </Link>
       </div>
     </div>
   );
