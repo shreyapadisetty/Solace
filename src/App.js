@@ -60,14 +60,37 @@ return (
         </div>
       </div>
 
-      {/* Goals */}
+      {/* Goals Section */}
       <div className="py-12 px-8 bg-[#f1f7f9]">
         <h2 className="text-4xl font-bold text-center mb-12">Our Goals</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          {[...Array(3)].map((_, i) => (
+          {[
+            { title: "Provide Compassionate Support", description: "Offer a safe and understanding space for individuals navigating grief and emotional distress." },
+            { title: "Encourage Emotional Well-being", description: "Equip users with mindfulness exercises, journaling, and check-ins to foster self-awareness and healing." },
+            { title: "Promote Mental Health Awareness", description: "Break the stigma around grief and emotional struggles by making mental health support more accessible and engaging." }
+          ].map((goal, i) => (
             <div key={i} className="bg-[#4aa2dc] p-8 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Goal {i + 1}</h3>
-              <p className="text-white text-sm">A brief description of this goal and its importance in the context of Solace. Our goal is to ensure compassionate support for those in need, providing practical and emotional assistance when it's needed most.</p>
+              <h3 className="text-xl font-bold text-white mb-4">{goal.title}</h3>
+              <p className="text-white text-sm">{goal.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="py-12 px-8 bg-[#f1f7f9]">
+        <h2 className="text-4xl font-bold text-center mb-12">Key Features</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          {[
+            { title: "AI-Powered Conversations", description: "Engage with our chatbot through voice or text to receive compassionate support tailored to your emotions." },
+            { title: "Daily Check-Ins", description: "Track your emotional well-being with daily prompts designed to help you reflect and process your feelings." },
+            { title: "Mindfulness Exercises", description: "Practice guided mindfulness techniques to reduce stress and cultivate inner peace during difficult moments." },
+            { title: "Personal Journaling", description: "Write and store private journal entries to express your thoughts and emotions in a safe digital space." },
+            { title: "Progress Insights", description: "Gain valuable insights into your emotional journey with detailed reports on your activity, including check-ins, journaling habits, and mindfulness sessions." }
+          ].map((feature, i) => (
+            <div key={i} className="bg-[#b0dce7] p-8 rounded-lg shadow-lg text-center">
+              <h3 className="text-xl font-bold text-[#4a4a4a] mb-4">{feature.title}</h3>
+              <p className="text-[#4a4a4a] text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
